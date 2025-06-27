@@ -24,7 +24,6 @@ public class AttackEnState : IState{
 
         if (timer >= attackCooldown)
         {
-            // Acá hacés daño al jugador
             enemy.StateMachine.ChangeState(new WalkState(enemy));
         }
     }

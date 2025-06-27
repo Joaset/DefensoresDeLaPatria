@@ -344,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7720274644134328476}
   - component: {fileID: 7974313873011312750}
+  - component: {fileID: 1361030083047582633}
   m_Layer: 0
   m_Name: Cuerpo
   m_TagString: Untagged
@@ -401,6 +402,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00000011920929, y: 0.0062779784}
   m_Size: {x: 0.21108127, y: 1.2669932}
   m_Direction: 0
+--- !u!114 &1361030083047582633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960647317944965670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3cc13d5d93751e419ef8c081d11b185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  player: {fileID: 1267567986581324584}
+  uiManager: {fileID: 0}
 --- !u!1 &5721618876688139210
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +456,6 @@ Transform:
   - {fileID: 4496500431473454488}
   - {fileID: 5973689346371853157}
   - {fileID: 8518947857240085705}
-  - {fileID: 2737848358351276287}
   m_Father: {fileID: 4993937754163855466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &278802130959296109
@@ -536,8 +552,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993937754163855466}
-  - component: {fileID: 1267567986581324584}
   - component: {fileID: 401484129950568824}
+  - component: {fileID: 1267567986581324584}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -559,31 +575,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6553315820116440819}
+  - {fileID: 2737848358351276287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1267567986581324584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8181193001022597051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e9d5efa06e2cdf4983c46852f3ac70f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitbox: {fileID: 3818956246797280866}
-  kickbox: {fileID: 2818706001243653211}
-  airkickbox: {fileID: 8856087226047429476}
-  pickupbox: {fileID: 3680187895269456644}
-  Visual: {fileID: 6553315820116440819}
-  ani: {fileID: 5781453182590908051}
-  pp: {fileID: 0}
-  health: {fileID: 0}
-  moveSpeed: 5
-  isJumping: 0
-  canJump: 1
 --- !u!50 &401484129950568824
 Rigidbody2D:
   serializedVersion: 4
@@ -611,6 +605,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1267567986581324584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181193001022597051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9d5efa06e2cdf4983c46852f3ac70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitbox: {fileID: 3818956246797280866}
+  kickbox: {fileID: 2818706001243653211}
+  airkickbox: {fileID: 8856087226047429476}
+  pickupbox: {fileID: 3680187895269456644}
+  Visual: {fileID: 6553315820116440819}
+  ani: {fileID: 5781453182590908051}
+  pp: {fileID: 0}
+  health: {fileID: 0}
+  moveSpeed: 5
+  isJumping: 0
+  canJump: 1
 --- !u!1 &8856087226047429476
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,11 +749,11 @@ Transform:
   m_GameObject: {fileID: 9081254475956740929}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.062, y: -0.93999994, z: 0}
+  m_LocalPosition: {x: -2.4358425, y: -2.09, z: -0.048213094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6553315820116440819}
+  m_Father: {fileID: 4993937754163855466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5074819686540626937
 SpriteRenderer:

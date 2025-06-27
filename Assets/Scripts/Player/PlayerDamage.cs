@@ -8,15 +8,15 @@ public class PlayerDamage : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            EnemyController enemyHealth = other.GetComponent<EnemyController>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(20);
+                enemyHealth.TakeDamage(20f);
                 ScoreManager.instance.AddScore(100); // +100 puntos
             }
         }
 
-        if(other.CompareTag("Objects")){
+        if(other.CompareTag("Object")){
             ObjetoDestructible breakable = other.GetComponent<ObjetoDestructible>();
             if (breakable != null)
             {

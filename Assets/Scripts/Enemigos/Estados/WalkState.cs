@@ -17,7 +17,7 @@ public class WalkState : IState
     public void Update()
     {
         float distance = Vector3.Distance(enemy.transform.position, enemy.player.position);
-
+        
         Vector2 direccion = enemy.player.position - enemy.transform.position;
 
         if (Mathf.Abs(direccion.x) > 0.1f)
@@ -31,19 +31,19 @@ public class WalkState : IState
             }
             else if (!band && enemy.mira)
             {
-                enemy.transform.localScale = new Vector2(enemy.transform.localScale.x * -1, enemy.transform.localScale.y);
+                enemy.transform.localScale = new Vector2(enemy.transform.localScale.x * 1, enemy.transform.localScale.y);
                 enemy.mira = false;
             }
         }
 
-        if (distance <= enemy.attackRange)
+        if (distance < enemy.attackRange)
         {
             enemy.StateMachine.ChangeState(new AttackEnState(enemy));
             return;
         }
 
         Vector3 dir = (enemy.player.position - enemy.transform.position).normalized;
-        enemy.transform.position += dir * enemy.speed * Time.deltaTime;
+        enemy.transform.position += (dir * enemy.speed * Time.deltaTime);
     }
 
     public void Exit() {}

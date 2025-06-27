@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public Animator animator;
     public float speed = 2f;
-    public float attackRange = 1.5f;
+    public float attackRange;
     public float health;
     public bool mira = true;
 

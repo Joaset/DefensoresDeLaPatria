@@ -197,5 +197,5 @@ MonoBehaviour:
   sr: {fileID: 2464759558871474062}
   rb: {fileID: 5500363172971215950}
   deathBounceForce: 3
-  powerUpPrefab: {fileID: 0}
+  powerUpPrefab: {fileID: 6300963052334893442, guid: bb865b7cb7230124193ae4f28f4e8f3e, type: 3}
   powerUpDropChance: 0.3
