@@ -1,24 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3;
-    public int currentHealth;
+    //public int maxHealth = 3;
+    public float currentHealth;
     public PlayerController player;
-    public UIManager uiManager;
+    //public UIManager uiManager;
+    public Image healthBar;
 
     private void Start()
     {
-        currentHealth = maxHealth;
-        uiManager.UpdateLives(currentHealth);
+        currentHealth = GameManager.Instance.maxHealth; ;
+        //uiManager.UpdateLives(currentHealth);
+    }
+
+   void Update()
+    {
+        healthBar.fillAmount = currentHealth / 100;
     }
 
     public void TakeDamage()
     {
-        currentHealth --;
-        uiManager.UpdateLives(currentHealth);
+        currentHealth = currentHealth -10;
+        //uiManager.UpdateLives(currentHealth);
 
         if(player != null){
             if (currentHealth <= 0)
@@ -37,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeLife()
     {
-        currentHealth ++;
-        uiManager.UpdateLives(currentHealth);
+        currentHealth = currentHealth +10;
+        //uiManager.UpdateLives(currentHealth);
     }
 }
