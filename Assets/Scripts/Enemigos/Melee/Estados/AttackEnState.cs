@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackEnState : IState{
     private EnemyController enemy;
-    private float attackCooldown = 1f;
+    private float attackCooldown = 1.25f;
     private float timer = 0;
 
     public AttackEnState(EnemyController enemy)

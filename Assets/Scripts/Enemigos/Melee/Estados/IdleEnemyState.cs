@@ -24,7 +24,7 @@ public class IdleEnemyState : IState
         timer += Time.deltaTime;
 
         float distance = Vector3.Distance(enemy.transform.position, enemy.player.position);
-
+        Debug.Log(timer >= idleDuration);
         if (distance <= enemy.attackRange)
         {
             enemy.StateMachine.ChangeState(new AttackEnState(enemy));
