@@ -14,11 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Object
+  - Wall
+  - Ground
   - 
   - 
   - 
@@ -50,12 +50,12 @@ TagManager:
   - name: Wall
     uniqueID: 3380810093
     locked: 0
+  - name: Objetos
+    uniqueID: 1830019285
+    locked: 0
   - name: Enemy
     uniqueID: 1230264825
     locked: 0
   - name: Player
     uniqueID: 2885766445
-    locked: 0
-  - name: Objetos
-    uniqueID: 1830019285
     locked: 0

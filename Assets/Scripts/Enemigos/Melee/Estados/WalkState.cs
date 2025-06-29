@@ -31,7 +31,7 @@ public class WalkState : IState
             }
             else if (!band && enemy.mira)
             {
-                enemy.transform.localScale = new Vector2(enemy.transform.localScale.x * 1, enemy.transform.localScale.y);
+                enemy.transform.localScale = new Vector2(enemy.transform.localScale.x * -1, enemy.transform.localScale.y);
                 enemy.mira = false;
             }
         }

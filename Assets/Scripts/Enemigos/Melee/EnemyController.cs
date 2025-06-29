@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     public float speed = 2f;
     public float attackRange;
     public float health;
-    public bool mira = true;
+    public bool mira;
 
     public FMSEnemy StateMachine { get; private set; }
 
@@ -22,6 +22,12 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         StateMachine.Initialize(new WalkState(this));
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObj != null)
+            player = playerObj.transform;
+        else
+            Debug.LogWarning("No hay player");
     }
 
     private void Update()

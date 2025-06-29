@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd29a9cfe6fd30243a0b1f0e8f99d8b6
+guid: eb35c8deb30b4d840aee16b941f2cf3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 31.5
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,337 +110,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_0
+      name: suelo-nubes-tierra-barril (invertido)_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 8
         y: 152
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1782ed7263e004c9b7fd7cee95d755
-      internalID: 1427396017
+      spriteID: a1904e49fb555ee478e6550e672b84df
+      internalID: -687339328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_1
+      name: suelo-nubes-tierra-barril (invertido)_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 56
         y: 152
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4aa5d90dd5a21541824da153733dfbe
-      internalID: 286946543
+      spriteID: 7ab93e75f86e06f40bc55b77c45edcca
+      internalID: -503363320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_2
+      name: suelo-nubes-tierra-barril (invertido)_2
       rect:
         serializedVersion: 2
-        x: 112
+        x: 104
         y: 152
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d7f7bf92776c534589dad75938cf90a
-      internalID: -1488868487
+      spriteID: 6b0ac7ecaeef0fb498f37b01dafdb0f8
+      internalID: 2078130628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_3
+      name: suelo-nubes-tierra-barril (invertido)_3
       rect:
         serializedVersion: 2
-        x: 160
+        x: 153
         y: 152
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4a854bb4bcb85e4ebfd2644dc8671d6
-      internalID: 430860480
+      spriteID: b93e8fc9782a7af4fac53c8e16d0eb16
+      internalID: 1794728074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_4
+      name: suelo-nubes-tierra-barril (invertido)_4
       rect:
         serializedVersion: 2
-        x: 16
+        x: 8
         y: 104
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd50eee8a9f56054c9683fa85d948bb8
-      internalID: 1872527946
+      spriteID: ad6188f091f6e724b9157180b900df9b
+      internalID: 1846105631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_5
+      name: suelo-nubes-tierra-barril (invertido)_5
       rect:
         serializedVersion: 2
-        x: 65
+        x: 56
+        y: 104
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0974617b3469edf41a8c6e5e91712751
+      internalID: 347865031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelo-nubes-tierra-barril (invertido)_6
+      rect:
+        serializedVersion: 2
+        x: 103
         y: 104
         width: 30
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 745d328aebca9874494d56d12d126b2b
-      internalID: -1029386589
+      spriteID: 5639fde42429bbd48a07e3148d5e60ef
+      internalID: 1158835643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_6
+      name: suelo-nubes-tierra-barril (invertido)_7
       rect:
         serializedVersion: 2
-        x: 112
+        x: 152
         y: 104
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69704da8536a68b439bd526ccfb9643d
-      internalID: -2063729808
+      spriteID: 9cbe411267145c545a61f09dfaa46696
+      internalID: -1155771019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_7
+      name: suelo-nubes-tierra-barril (invertido)_8
       rect:
         serializedVersion: 2
-        x: 160
-        y: 104
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 328902aa7febbfe4ca1601fff595d84c
-      internalID: -1787624717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_8
-      rect:
-        serializedVersion: 2
-        x: 16
+        x: 8
         y: 56
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14ddcb541177304abc76d1c795c194b
-      internalID: 1854109191
+      spriteID: 5bcafcc8d1dd17d4e89f34926da17227
+      internalID: -2059108004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_9
+      name: suelo-nubes-tierra-barril (invertido)_9
       rect:
         serializedVersion: 2
-        x: 64
+        x: 56
         y: 56
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2573443aa1a8f4b43890b253d4f3ea1f
-      internalID: 1789960346
+      spriteID: be594e4752390be418aa6fdf9c5aad2a
+      internalID: 1903068206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_10
+      name: suelo-nubes-tierra-barril (invertido)_10
       rect:
         serializedVersion: 2
-        x: 112
+        x: 104
         y: 56
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81fbbb914086a0447a8414f051a6129e
-      internalID: 1104683066
+      spriteID: 25d717adcfa3e96439832f1e30c1e377
+      internalID: -2062005142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_11
+      name: suelo-nubes-tierra-barril (invertido)_11
       rect:
         serializedVersion: 2
-        x: 160
+        x: 152
         y: 56
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0947e372a9149934abb8b73ceab127c9
-      internalID: -591797450
+      spriteID: 5830bf6ecb0eeae419fa4107149b19b4
+      internalID: -1223996055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_12
+      name: suelo-nubes-tierra-barril (invertido)_12
       rect:
         serializedVersion: 2
-        x: 106
-        y: 33
-        width: 30
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a26d01fc0dae51341828091b289baf1b
-      internalID: -1038310067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_13
-      rect:
-        serializedVersion: 2
-        x: 151
+        x: 9
         y: 37
         width: 40
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6703b36f99e690c4fa480533cfc66395
-      internalID: 935324408
+      spriteID: b60dbd9a500d7bd419fd2fd315e80882
+      internalID: 1637709830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_14
+      name: suelo-nubes-tierra-barril (invertido)_13
       rect:
         serializedVersion: 2
-        x: 15
-        y: 12
-        width: 81
-        height: 25
+        x: 64
+        y: 33
+        width: 30
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483dda1fd78f7244d810a0afd11898c4
-      internalID: 598171845
+      spriteID: fd00b4f9c25e7bb45897e7d9f9d5b6fe
+      internalID: -1705423135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelo-nubes-tierra-barril_15
+      name: suelo-nubes-tierra-barril (invertido)_14
       rect:
         serializedVersion: 2
-        x: 116
+        x: 23
         y: 12
         width: 61
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b23969f6ca0b9ee4393ab836213242a8
-      internalID: 2111717814
+      spriteID: 545c45498dee94446a60034304989b88
+      internalID: 1795046151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelo-nubes-tierra-barril (invertido)_15
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 12
+        width: 81
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89be5da8c4a962d428b1e3295d39f6b7
+      internalID: -947780997
       vertices: []
       indices: 
       edges: []
@@ -456,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      suelo-nubes-tierra-barril_0: 1427396017
-      suelo-nubes-tierra-barril_1: 286946543
-      suelo-nubes-tierra-barril_10: 1104683066
-      suelo-nubes-tierra-barril_11: -591797450
-      suelo-nubes-tierra-barril_12: -1038310067
-      suelo-nubes-tierra-barril_13: 935324408
-      suelo-nubes-tierra-barril_14: 598171845
-      suelo-nubes-tierra-barril_15: 2111717814
-      suelo-nubes-tierra-barril_2: -1488868487
-      suelo-nubes-tierra-barril_3: 430860480
-      suelo-nubes-tierra-barril_4: 1872527946
-      suelo-nubes-tierra-barril_5: -1029386589
-      suelo-nubes-tierra-barril_6: -2063729808
-      suelo-nubes-tierra-barril_7: -1787624717
-      suelo-nubes-tierra-barril_8: 1854109191
-      suelo-nubes-tierra-barril_9: 1789960346
+      suelo-nubes-tierra-barril (invertido)_0: -687339328
+      suelo-nubes-tierra-barril (invertido)_1: -503363320
+      suelo-nubes-tierra-barril (invertido)_10: -2062005142
+      suelo-nubes-tierra-barril (invertido)_11: -1223996055
+      suelo-nubes-tierra-barril (invertido)_12: 1637709830
+      suelo-nubes-tierra-barril (invertido)_13: -1705423135
+      suelo-nubes-tierra-barril (invertido)_14: 1795046151
+      suelo-nubes-tierra-barril (invertido)_15: -947780997
+      suelo-nubes-tierra-barril (invertido)_2: 2078130628
+      suelo-nubes-tierra-barril (invertido)_3: 1794728074
+      suelo-nubes-tierra-barril (invertido)_4: 1846105631
+      suelo-nubes-tierra-barril (invertido)_5: 347865031
+      suelo-nubes-tierra-barril (invertido)_6: 1158835643
+      suelo-nubes-tierra-barril (invertido)_7: -1155771019
+      suelo-nubes-tierra-barril (invertido)_8: -2059108004
+      suelo-nubes-tierra-barril (invertido)_9: 1903068206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

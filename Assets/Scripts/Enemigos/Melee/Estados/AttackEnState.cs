@@ -24,7 +24,7 @@ public class AttackEnState : IState{
 
         if (timer >= attackCooldown)
         {
-            enemy.StateMachine.ChangeState(new WalkState(enemy));
+            enemy.StateMachine.ChangeState(new IdleEnemyState(enemy));
         }
     }
 
