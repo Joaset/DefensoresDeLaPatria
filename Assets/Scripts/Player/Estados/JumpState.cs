@@ -31,7 +31,7 @@ public class JumpState : IState
         timeSinceLastAttack += Time.deltaTime;
 
         Vector3 moveDir = new Vector3(input.x, 0f, input.y).normalized;
-        player.transform.position += moveDir * player.moveSpeed * Time.deltaTime;
+        player.transform.position += (new Vector3(moveDir.x, moveDir.y, 0f)) * player.moveSpeed * Time.deltaTime;
 
         verticalVelocity += gravity * Time.deltaTime;
         Vector3 pos = player.Visual.localPosition;

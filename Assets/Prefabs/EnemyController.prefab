@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1230264825
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5b52c655ebb188649b87cd645aff9fa7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,7 +171,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021502137, y: -0.92824113}
+  m_Offset: {x: -0.0012879372, y: -1.8850294}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -182,7 +182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67776394, y: 0.11226773}
+  m_Size: {x: 1.2033243, y: 0.22007489}
   m_EdgeRadius: 0
 --- !u!114 &1782366969898514070
 MonoBehaviour:
@@ -202,7 +202,7 @@ MonoBehaviour:
   speed: 2
   attackRange: 1.5
   health: 100
-  mira: 1
+  mira: 0
 --- !u!1 &3452346139125234101
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1230264825
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5ee615f4aabceaf4794467edbc76eff9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
