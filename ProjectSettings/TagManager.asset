@@ -50,6 +50,15 @@ TagManager:
   - name: Wall
     uniqueID: 3380810093
     locked: 0
+  - name: Wall1
+    uniqueID: 884945247
+    locked: 0
+  - name: Wall2
+    uniqueID: 1486255591
+    locked: 0
+  - name: Wall3
+    uniqueID: 476492241
+    locked: 0
   - name: Objetos
     uniqueID: 1830019285
     locked: 0
