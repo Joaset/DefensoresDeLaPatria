@@ -12,7 +12,7 @@ public class IdleState : IState
     }
 
     public void Enter() {
-        player.ani.Play("IdleAnimation");
+        player.ani.Play("IdlePlayer1");
     }
 
     public void Update() {

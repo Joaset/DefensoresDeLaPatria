@@ -9,11 +9,6 @@ public class JumpState : IState
     private float gravity = -12f;
     private float verticalVelocity = 0f;
 
-    private int currentAttack = 0;
-    private float timeSinceLastAttack = 0f;
-    private float comboResetTime = 1f;
-    private float attackDelay = 0.15f;
-
     public JumpState(PlayerController player) {
         this.player = player;
     }
@@ -28,7 +23,6 @@ public class JumpState : IState
     public void Update() {
         if (!player.IsMovementEnabled()) return;
         Vector2 input = player.mov;
-        timeSinceLastAttack += Time.deltaTime;
 
         Vector3 moveDir = new Vector3(input.x, 0f, input.y).normalized;
         player.transform.position += (new Vector3(moveDir.x, moveDir.y, 0f)) * player.moveSpeed * Time.deltaTime;
@@ -39,12 +33,7 @@ public class JumpState : IState
         player.Visual.localPosition = pos;//hace salto del sprite renderer
         
         if (Input.GetKeyDown(KeyCode.K) && player.isJumping) {
-            currentAttack++;
-            if (timeSinceLastAttack > comboResetTime || currentAttack > 2)
-                currentAttack = 1;
-
-            player.ani.SetTrigger("AirAttack" + currentAttack);
-            timeSinceLastAttack = 0f;
+            player.ani.SetTrigger("AirAttack");
         }
 
         if (player.Visual.localPosition.y <= 0f) {
@@ -64,6 +53,5 @@ public class JumpState : IState
         player.ani.SetBool("saltando", false);
         player.isJumping = false;
         player.canJump = true;
-        currentAttack = 0;
     }
 }

@@ -33,7 +33,6 @@ public class PlayerHealth : MonoBehaviour
         {
             if (currentHealth <= 0)
             {
-                //player.ChangeStatetoHurt();
                 //GameObject.Destroy(player);
                 StartCoroutine(Lose());
             }
@@ -56,13 +55,14 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator Lose()
     {
-        player.ChangeStatetoHurt();
+        
+        player.ani.SetTrigger("Dead");
+        player.SetMovementEnabled(false);
+        GetComponent<Collider2D>().enabled = false;
         GameObject.Destroy(player);
 
-        // Esperar 3 segundos
         yield return new WaitForSeconds(1.5f);
 
-        // Cambiar de escena (asegurate de que la escena esté en el Build Settings)
         SceneManager.LoadScene("Derrota");
     }
 }
