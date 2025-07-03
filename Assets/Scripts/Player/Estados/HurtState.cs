@@ -5,7 +5,6 @@ using UnityEngine;
 public class HurtState : IState
 {
     private PlayerController player;
-    private float hurtDuration = 0.5f;
     private float timer;
 
     public HurtState(PlayerController player)
@@ -16,22 +15,21 @@ public class HurtState : IState
     public void Enter()
     {
         timer = 0f;
-        player.ani.SetTrigger("Hurt"); // Asegurate de tener esta animación
-        player.SetMovementEnabled(false); // Desactivar movimiento si querés
+        player.ani.SetTrigger("Hurt"); 
+        player.SetMovementEnabled(false);
     }
 
     public void Update()
     {
         timer += Time.deltaTime;
-
-        if (timer >= hurtDuration)
+        if (timer >= 0.5f)
         {
-            player.StateMachine.ChangeState(new IdleState(player)); // o JumpState si está en el aire
+            player.StateMachine.ChangeState(new MovState(player));
         }
     }
 
     public void Exit()
     {
-        player.SetMovementEnabled(true); // Volver a habilitar movimiento
+        player.SetMovementEnabled(true);
     }
 }

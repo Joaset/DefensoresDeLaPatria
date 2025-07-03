@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FMSEnemy : MonoBehaviour
+public class FMSEnemy
 {
     public IState CurrentState { get; private set; }
 

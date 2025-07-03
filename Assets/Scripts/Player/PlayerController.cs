@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Animator ani;
     [HideInInspector] public PowerUps pp;
     public PlayerHealth health;
+    //public Transform weaponHolder;
     
     public float moveSpeed = 5f;
     public bool isJumping;
@@ -59,10 +60,6 @@ public class PlayerController : MonoBehaviour
     public void DisabledPickup()
     {
         pickupbox.SetActive(false);
-    }
-
-    public void ChangeStatetoDead(){
-        StateMachine.ChangeState(new DeadState(this));
     }
 
     public void ChangeStatetoHurt(){

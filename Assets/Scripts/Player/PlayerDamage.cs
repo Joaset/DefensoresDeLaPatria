@@ -9,10 +9,22 @@ public class PlayerDamage : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             EnemyController enemyHealth = other.GetComponent<EnemyController>();
+            Debug.Log(enemyHealth);
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(20f);
-                ScoreManager.instance.AddScore(100); // +100 puntos
+                enemyHealth.TakeDamage(1);
+                ScoreManager.instance.AddScore(10);
+            }
+        }
+
+        if (other.CompareTag("EnemyRange"))
+        {
+            EnemyRangeController enemyHealth = other.GetComponent<EnemyRangeController>();
+            Debug.Log(enemyHealth);
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(1);
+                ScoreManager.instance.AddScore(10);
             }
         }
 
