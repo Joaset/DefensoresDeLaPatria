@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public Animator ani;
     [HideInInspector] public PowerUps pp;
     public PlayerHealth health;
-    //public Transform weaponHolder;
     
     public float moveSpeed = 5f;
     public bool isJumping;
