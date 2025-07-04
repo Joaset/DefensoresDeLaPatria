@@ -317,14 +317,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277c0fe90ab22b248a44de02f2715cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeEnemyPrefab: {fileID: 2675425472783983636, guid: 54f10da7166685240aeda55570676016, type: 3}
-  rangedEnemyPrefab: {fileID: 2806231149019098199, guid: 9b239669d5fef76428357968ba4f9bdc, type: 3}
+  meleeEnemyPrefab: {fileID: 2657928786433998637, guid: 8df2e9585d0ef924bbbaaa4e32550f55, type: 3}
+  rangedEnemyPrefab: {fileID: 460978563970914670, guid: 211e3a0e318dd32458c532381ffc95d8, type: 3}
   spawnPoints:
   - {fileID: 6116684807241744518}
-  - {fileID: 186823891139650546}
   - {fileID: 7482266266448647805}
   - {fileID: 7636939053471056999}
-  - {fileID: 5008990041885943116}
   - {fileID: 5860383030124585715}
   waves:
   - meleeCount: 3
