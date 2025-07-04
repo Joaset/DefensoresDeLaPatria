@@ -9,7 +9,10 @@ public class ObjetoDestructible : MonoBehaviour
 
     public SpriteRenderer sr;
     public Rigidbody2D rb;
-    public float deathBounceForce = 3f;
+    //public float deathBounceForce = 3f;
+
+    public GameObject powerUpPrefab;
+    [Range(0f, 1f)] public float powerUpDropChance = 0.3f;
 
     private bool isDying = false;
 
@@ -40,13 +43,11 @@ public class ObjetoDestructible : MonoBehaviour
     {
         isDying = true;
 
-        // Calcular dirección contraria al atacante
-        Vector2 direction = (transform.position - attackerPosition).normalized;
-        Vector2 bounceForce = new Vector2(direction.x, 0.5f).normalized * deathBounceForce;
+        // Vector2 direction = (transform.position - attackerPosition).normalized;
+        // Vector2 bounceForce = new Vector2(direction.x, 0.5f).normalized * deathBounceForce;
 
-        rb.velocity = bounceForce;
+        // rb.velocity = bounceForce;
 
-        // Parpadeo
         for (int i = 0; i < 5; i++)
         {
             sr.enabled = false;
@@ -55,14 +56,10 @@ public class ObjetoDestructible : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        // Posible aparición de power-up
         TrySpawnPowerUp();
 
         Destroy(gameObject);
     }
-
-    public GameObject powerUpPrefab; // arrastrar prefab desde el Inspector
-    [Range(0f, 1f)] public float powerUpDropChance = 0.3f;
 
     private void TrySpawnPowerUp()
     {
