@@ -11,25 +11,34 @@ public class MainMenu : MonoBehaviour
         {
             AudioManager.Instance.PlayAudio(AudioManager.Instance.menuMusic);
         }
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.lose);
+        }
     }
     public void Play()
     {
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.button);
         SceneManager.LoadScene(1);
         AudioManager.Instance.StopAudio(AudioManager.Instance.menuMusic);
     }
 
     public void Restart()
     {
+        AudioManager.Instance.StopAudio(AudioManager.Instance.lose);
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.button);
         SceneManager.LoadScene(0);
     }
 
     public void Exit()
     {
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.button);
         Application.Quit();
     }
 
     public void Choose()
     {
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.button);
         SceneManager.LoadScene(3);
         AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
     }

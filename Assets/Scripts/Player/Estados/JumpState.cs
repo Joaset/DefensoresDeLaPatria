@@ -34,6 +34,7 @@ public class JumpState : IState
         
         if (Input.GetKeyDown(KeyCode.K) && player.isJumping) {
             player.ani.SetTrigger("AirAttack");
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.kick);
         }
 
         if (player.Visual.localPosition.y <= 0f) {

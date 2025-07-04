@@ -34,6 +34,7 @@ public class AttackState : IState
                 currentAttack = 1;
 
             player.ani.SetTrigger("Attack" + currentAttack);
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.punch);
             timeSinceLastAttack = 0f;
 
             isAttacking = true;

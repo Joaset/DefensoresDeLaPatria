@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource menuMusic, backgroundMusic, punch, enemydead, dead, winMusic, life;
+    public AudioSource menuMusic, backgroundMusic, punch, kick, enemyHurt, enemydead, dead, winMusic, life, lose, button;
     public static AudioManager Instance;
 
     private void Awake()
