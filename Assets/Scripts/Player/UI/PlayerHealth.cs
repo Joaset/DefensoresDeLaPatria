@@ -54,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
         player.SetMovementEnabled(false);
         GetComponent<Collider2D>().enabled = false;
         GameObject.Destroy(player);
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.dead);
 
         yield return new WaitForSeconds(1.5f);
 
