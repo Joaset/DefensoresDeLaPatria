@@ -17,6 +17,7 @@ public class PickUpState : IState
     {
         timer = 0f;
         player.ani.SetTrigger("Pickup");
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.life);
         player.SetMovementEnabled(false);
     }
 
