@@ -12,6 +12,10 @@ public class EnemyController : MonoBehaviour
     public float health;
     public bool mira;
 
+    //para el spawn de enemigos
+    public delegate void DeathHandler();
+    public event DeathHandler OnDeath;
+
     public FMSEnemy StateMachine { get; private set; }
 
     private void Awake()
@@ -39,10 +43,18 @@ public class EnemyController : MonoBehaviour
     {
         health -= damage;
         Debug.Log(health);
-        if (health <= 0)
+        if (health <= 0){
             StateMachine.ChangeState(new DeathEnemyState(this));
-        else
+            Die();
+        }else{
             StateMachine.ChangeState(new HurtEnemyState(this));
+        }
+    }
+
+    public void Die()
+    {
+        OnDeath?.Invoke();
+        Destroy(gameObject);
     }
 
     public void ChageStatetoDie(){
