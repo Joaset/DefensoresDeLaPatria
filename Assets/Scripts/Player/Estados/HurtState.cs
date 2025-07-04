@@ -15,7 +15,8 @@ public class HurtState : IState
     public void Enter()
     {
         timer = 0f;
-        player.ani.SetTrigger("Hurt"); 
+        player.ani.SetTrigger("Hurt");
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.enemyHurt);
         player.SetMovementEnabled(false);
     }
 

@@ -18,6 +18,7 @@ public class KickState : IState
     {
         if (!player.isJumping)
             player.ani.SetTrigger("Kick");
+            AudioManager.Instance.PlayAudio(AudioManager.Instance.kick);
 
     }
 
