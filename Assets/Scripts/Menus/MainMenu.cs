@@ -11,10 +11,6 @@ public class MainMenu : MonoBehaviour
         {
             AudioManager.Instance.PlayAudio(AudioManager.Instance.menuMusic);
         }
-        if (SceneManager.GetActiveScene().buildIndex == 4)
-        {
-            AudioManager.Instance.PlayAudio(AudioManager.Instance.lose);
-        }
     }
 
     void Update()
