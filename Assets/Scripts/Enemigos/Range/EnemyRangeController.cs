@@ -13,6 +13,10 @@ public class EnemyRangeController : MonoBehaviour
     public int maxHealth;
     public float timer;
 
+    //para el spawn de enemigos
+    public delegate void DeathHandler();
+    public event DeathHandler OnDeath;
+
     [HideInInspector] public int currentHealth;
     [HideInInspector] public Transform player;
     public FMSRangeState StateMachine { get; private set; }
@@ -42,15 +46,6 @@ public class EnemyRangeController : MonoBehaviour
         StateMachine.ChangeState(new IdleRangeState(this));
     }
 
-    /*public void DropWeapon()
-    {
-        if (Random.value < 0.5f)
-        {
-            GameObject weapon = Instantiate(weaponPrefab, transform.position, Quaternion.identity);
-            weapon.GetComponent<WeaponPickup>().SetAmmo(Random.Range(1, 6));
-        }
-    }*/
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -58,10 +53,17 @@ public class EnemyRangeController : MonoBehaviour
         if (currentHealth <= 0)
         {
             StateMachine.ChangeState(new DeadRangeState(this));
+            Die();
         }
         else
         {
             StateMachine.ChangeState(new HurtRangeState(this));
         }
+    }
+    
+    public void Die()
+    {
+        OnDeath?.Invoke();
+        Destroy(gameObject);
     }
 }

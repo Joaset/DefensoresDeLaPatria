@@ -202,7 +202,7 @@ MonoBehaviour:
   animator: {fileID: 8538638657855829361}
   speed: 2
   attackRange: 1.5
-  health: 100
+  health: 3
   mira: 0
 --- !u!70 &7758911626149073388
 CapsuleCollider2D:

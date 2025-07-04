@@ -130,7 +130,7 @@ MonoBehaviour:
   shootPoint: {fileID: 8264082105290333324}
   animator: {fileID: 138911274630798614}
   maxHealth: 3
-  timer: 0
+  timer: 5
   currentHealth: 0
   player: {fileID: 0}
 --- !u!61 &2728461095499389865
