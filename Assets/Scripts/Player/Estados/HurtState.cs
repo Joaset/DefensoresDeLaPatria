@@ -15,7 +15,7 @@ public class HurtState : IState
     public void Enter()
     {
         timer = 0f;
-        player.ani.SetTrigger("Hurt");
+        player.ani.SetBool("Hurt", true);
         AudioManager.Instance.PlayAudio(AudioManager.Instance.enemyHurt);
         player.SetMovementEnabled(false);
     }
@@ -31,6 +31,7 @@ public class HurtState : IState
 
     public void Exit()
     {
+        player.ani.SetBool("Hurt", false);
         player.SetMovementEnabled(true);
     }
 }

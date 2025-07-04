@@ -33,7 +33,7 @@ public class JumpState : IState
         player.Visual.localPosition = pos;//hace salto del sprite renderer
         
         if (Input.GetKeyDown(KeyCode.K) && player.isJumping) {
-            player.ani.SetTrigger("AirAttack");
+            player.ani.SetBool("AirAttack", true);
             AudioManager.Instance.PlayAudio(AudioManager.Instance.kick);
         }
 
@@ -51,6 +51,7 @@ public class JumpState : IState
     }
 
     public void Exit() {
+        player.ani.SetBool("AirAttack", false);
         player.ani.SetBool("saltando", false);
         player.isJumping = false;
         player.canJump = true;
