@@ -16,6 +16,18 @@ public class MainMenu : MonoBehaviour
             AudioManager.Instance.PlayAudio(AudioManager.Instance.lose);
         }
     }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene(6);
+            }
+        }
+    }
+
     public void Play()
     {
         AudioManager.Instance.PlayAudio(AudioManager.Instance.button);
