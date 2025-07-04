@@ -31,5 +31,6 @@ public class MainMenu : MonoBehaviour
     public void Choose()
     {
         SceneManager.LoadScene(3);
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
     }
 }
