@@ -16,16 +16,18 @@ public class HurtState : IState
     {
         timer = 0f;
         player.ani.SetBool("Hurt", true);
-        AudioManager.Instance.PlayAudio(AudioManager.Instance.enemyHurt);
         player.SetMovementEnabled(false);
+        AudioManager.Instance.PlayAudio(AudioManager.Instance.enemyHurt);
     }
 
     public void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 0.5f)
+        if (timer >= 0.75f)
         {
             player.StateMachine.ChangeState(new MovState(player));
+            timer = 0;
+            return;
         }
     }
 

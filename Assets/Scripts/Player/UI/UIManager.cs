@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     //public Image[] lives;
     public TextMeshProUGUI scoreText;
-    private int score = 0;
+    private int score = 0000;
 
     /*public void UpdateLives(int health)
     {
