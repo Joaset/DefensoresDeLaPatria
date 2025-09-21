@@ -10,7 +10,7 @@ public class ChangeScene : MonoBehaviour
         if (Input.anyKeyDown)
         {
             AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
     }
 }
