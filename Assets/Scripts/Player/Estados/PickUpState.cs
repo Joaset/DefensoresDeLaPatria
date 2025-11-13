@@ -32,11 +32,7 @@ public class PickUpState : IState
                 Debug.Log(player.health.currentHealth < 100);
                 if (player.health.currentHealth < 100)
                 {
-                    Debug.Log(Input.GetKeyDown(KeyCode.L));
-                    if (Input.GetKeyDown(KeyCode.L))
-                    {
-                        player.health.TakeLife();
-                    }
+                    player.health.currentHealth += 10;
                 }
                 
 
