@@ -5,11 +5,9 @@ using UnityEngine;
 public class AttackState : IState
 {
     private PlayerController player;
-    private float timeSinceLastAttack = 0f;
-    private int currentAttack = 0;
-    private float comboResetTime = 1f;
-    private float attackDelay = 0.15f;
-    private bool isAttacking;
+    private float contKeyDown = 0f;
+    private int contAtaque = 0;
+    private float tiempoCombo = 1f;
 
     public AttackState(PlayerController player)
     {
@@ -18,42 +16,42 @@ public class AttackState : IState
 
     public void Enter()
     {
-        isAttacking = false;
+        contAtaque++;
+        player.ani.SetTrigger("Attack" + contAtaque);
     }
 
     public void Update()
     {
         if (!player.IsMovementEnabled()) return;
-        timeSinceLastAttack += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.J) && timeSinceLastAttack > attackDelay && !player.isJumping)
+        if (Input.GetKeyDown(KeyCode.J) && !player.isJumping)
         {
-            currentAttack++;
+            if (Time.time - contKeyDown < tiempoCombo)
+            {
+                contAtaque++;
+            }
+            else
+            {
+                contAtaque = 1;
+            }
 
-            if (timeSinceLastAttack > comboResetTime || currentAttack > 2)
-                currentAttack = 1;
+            contKeyDown = Time.time;
 
-            player.ani.SetTrigger("Attack" + currentAttack);
-            AudioManager.Instance.PlayAudio(AudioManager.Instance.punch);
-            timeSinceLastAttack = 0f;
+            if(contAtaque == 1)
+            {
+                player.ani.SetTrigger("Attack" + contAtaque);
+            }
 
-            isAttacking = true;
-        }
-
-        if (isAttacking && timeSinceLastAttack > 0.4f)
-        {
-            isAttacking = false;
-        }
-
-        if (!isAttacking && timeSinceLastAttack > comboResetTime)
-        {
-            player.StateMachine.ChangeState(new IdleState(player));
+            if (contAtaque == 2)
+            {
+                player.ani.SetTrigger("Attack" + contAtaque);
+                contAtaque = 0;
+            }
         }
     }
 
     public void Exit()
     {
-        currentAttack = 0;
-        isAttacking = false;
+        contAtaque = 0;
     }
 }

@@ -66,26 +66,26 @@ public class PlayerController : MonoBehaviour
     }
 
     public void EnableHitboxPunch() {
-        hitbox.SetActive(true); // o hitbox.GetComponent<Collider2D>().enabled = true;
+        hitbox.SetActive(true);
     }
 
     public void DisableHitboxPunch() {
-        hitbox.SetActive(false); // o hitbox.GetComponent<Collider2D>().enabled = false;
+        hitbox.SetActive(false);
     }
 
     public void EnableKickbox() {
-        kickbox.SetActive(true); // o hitbox.GetComponent<Collider2D>().enabled = true;
+        kickbox.SetActive(true);
     }
 
     public void DisableKickbox() {
-        kickbox.SetActive(false); // o hitbox.GetComponent<Collider2D>().enabled = false;
+        kickbox.SetActive(false);
     }
 
     public void EnableAirKickbox() {
-        airkickbox.SetActive(true); // o hitbox.GetComponent<Collider2D>().enabled = true;
+        airkickbox.SetActive(true);
     }
 
     public void DisableAirKickbox() {
-        airkickbox.SetActive(false); // o hitbox.GetComponent<Collider2D>().enabled = false;
+        airkickbox.SetActive(false);
     }
 }

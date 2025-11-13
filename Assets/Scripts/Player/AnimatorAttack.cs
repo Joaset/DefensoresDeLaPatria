@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimatorAttack : MonoBehaviour
 {
     private PlayerController player;
+    public Animator anim;
 
     private void Awake() {
         player = GetComponentInParent<PlayerController>();
