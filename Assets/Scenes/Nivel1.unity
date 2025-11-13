@@ -28821,7 +28821,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.698678, y: 3.9138067, z: -10}
+  m_LocalPosition: {x: -2.705655, y: 3.9137933, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35610,6 +35610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  player: 0
 --- !u!4 &862588723
 Transform:
   m_ObjectHideFlags: 0
@@ -39268,7 +39269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1082207594
@@ -39361,6 +39362,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 946249719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1098722625 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 428597246431085680, guid: 960252524dd32dc43844dea7b2b0595f, type: 3}
+  m_PrefabInstance: {fileID: 5954993146741756992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123699330
 GameObject:
   m_ObjectHideFlags: 0
@@ -53183,9 +53189,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6642442204433102632, guid: 960252524dd32dc43844dea7b2b0595f, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 1098722625}
+    - target: {fileID: 6642442204433102632, guid: 960252524dd32dc43844dea7b2b0595f, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 638498925}
+    - target: {fileID: 6642442204433102632, guid: 960252524dd32dc43844dea7b2b0595f, type: 3}
+      propertyPath: currentHealth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7202814740930354802, guid: 960252524dd32dc43844dea7b2b0595f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.96
