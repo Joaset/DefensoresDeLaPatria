@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeLife()
     {
         currentHealth = currentHealth +10;
+        Debug.Log("Vida: +10 " + currentHealth);
     }
 
     IEnumerator Lose()
