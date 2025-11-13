@@ -5,9 +5,12 @@ using UnityEngine;
 public class AttackState : IState
 {
     private PlayerController player;
-    private float contKeyDown = 0f;
     private int contAtaque = 0;
     private float tiempoCombo = 1f;
+
+    private float tiempoAtaque = 0.95f;
+    private float contTiempoAtaque;
+    private bool atacando =false;
 
     public AttackState(PlayerController player)
     {
@@ -17,6 +20,8 @@ public class AttackState : IState
     public void Enter()
     {
         contAtaque++;
+        atacando = true;
+        contTiempoAtaque = 0f;
         player.ani.SetTrigger("Attack" + contAtaque);
     }
 
@@ -24,29 +29,24 @@ public class AttackState : IState
     {
         if (!player.IsMovementEnabled()) return;
 
-        if (Input.GetKeyDown(KeyCode.J) && !player.isJumping)
+        if (atacando)
         {
-            if (Time.time - contKeyDown < tiempoCombo)
+            contTiempoAtaque += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.J) && contTiempoAtaque < tiempoCombo && contAtaque < 2)
             {
                 contAtaque++;
-            }
-            else
-            {
-                contAtaque = 1;
-            }
-
-            contKeyDown = Time.time;
-
-            if(contAtaque == 1)
-            {
                 player.ani.SetTrigger("Attack" + contAtaque);
+                contTiempoAtaque = 0f;
             }
 
-            if (contAtaque == 2)
+            if (contTiempoAtaque >= tiempoAtaque)
             {
-                player.ani.SetTrigger("Attack" + contAtaque);
+                atacando = false;
                 contAtaque = 0;
+                player.StateMachine.ChangeState(new IdleState(player));
             }
+
         }
     }
 

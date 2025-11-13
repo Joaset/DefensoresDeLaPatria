@@ -27,19 +27,25 @@ public class PickUpState : IState
 
         if (timer >= pickupDuration)
         {
-            // Aumentar vida
-            if(player.pp != null) Debug.Log(player.pp); 
-            else 
-                Debug.Log("no hay pp");
-            /*if(player.pp.playerInRange && Input.GetKeyDown(KeyCode.L)){
-                player.health.TakeLife();
-            }*/  
+            if (player.pp.playerInRange)
+            {
+                Debug.Log(player.health.currentHealth < 100);
+                if (player.health.currentHealth < 100)
+                {
+                    Debug.Log(Input.GetKeyDown(KeyCode.L));
+                    if (Input.GetKeyDown(KeyCode.L))
+                    {
+                        player.health.TakeLife();
+                    }
+                }
+                
 
-            if (player.pp != null)
-                player.pp.Collect();
+                if (player.pp != null)
+                    player.pp.Collect();
 
-            // Volver a Idle
-            player.StateMachine.ChangeState(new IdleState(player));
+                // Volver a Idle
+                player.StateMachine.ChangeState(new IdleState(player));
+            }
         }
     }
 
