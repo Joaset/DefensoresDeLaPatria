@@ -22,7 +22,7 @@ public class ZonaSpawn : MonoBehaviour
         }
     }
 
-    void ActivateWalls(bool active)
+    public void ActivateWalls(bool active)
     {
         foreach (var wall in wallsToActivate)
             wall.SetActive(active);
