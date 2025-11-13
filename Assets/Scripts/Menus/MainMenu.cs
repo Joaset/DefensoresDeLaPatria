@@ -50,4 +50,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(3);
         AudioManager.Instance.PlayAudio(AudioManager.Instance.backgroundMusic);
     }
+
+    public void SeleccionarJugador(int numero)
+    {
+        GameManager.Instance.player = numero;
+    }
 }
