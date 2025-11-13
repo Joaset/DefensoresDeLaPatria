@@ -16,24 +16,31 @@ public class HurtState : IState
     {
         timer = 0f;
         player.ani.SetBool("Hurt", true);
-        player.SetMovementEnabled(false);
+        //player.SetMovementEnabled(false);
         AudioManager.Instance.PlayAudio(AudioManager.Instance.enemyHurt);
     }
 
     public void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 0.75f)
+        if (timer >= 0.25f)
         {
             player.StateMachine.ChangeState(new MovState(player));
-            timer = 0;
-            return;
+            if (timer > 2f)
+            {
+                player.health.DetenerCorrutina();
+                timer = 0;
+                return;
+            }else
+            {
+                player.health.ActivarCorrutina();
+            }
         }
     }
 
     public void Exit()
     {
         player.ani.SetBool("Hurt", false);
-        player.SetMovementEnabled(true);
+        //player.SetMovementEnabled(true);
     }
 }
