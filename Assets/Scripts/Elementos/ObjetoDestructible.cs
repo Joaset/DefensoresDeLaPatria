@@ -9,7 +9,6 @@ public class ObjetoDestructible : MonoBehaviour
 
     public SpriteRenderer sr;
     public Rigidbody2D rb;
-    //public float deathBounceForce = 3f;
 
     public GameObject powerUpPrefab;
     [Range(0f, 1f)] public float powerUpDropChance = 0.3f;
@@ -42,11 +41,6 @@ public class ObjetoDestructible : MonoBehaviour
     private IEnumerator DestroySequence(Vector3 attackerPosition)
     {
         isDying = true;
-
-        // Vector2 direction = (transform.position - attackerPosition).normalized;
-        // Vector2 bounceForce = new Vector2(direction.x, 0.5f).normalized * deathBounceForce;
-
-        // rb.velocity = bounceForce;
 
         for (int i = 0; i < 5; i++)
         {
