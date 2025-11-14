@@ -12,7 +12,22 @@ public class IdleState : IState
     }
 
     public void Enter() {
-        player.ani.Play("IdlePlayer1");
+        if (GameManager.Instance.player == 1)
+        {
+            player.ani.Play("IdlePlayer1");
+        }
+        if (GameManager.Instance.player == 2)
+        {
+            player.ani.Play("IdlePlayer1"); //Cambiar a 2 cuando este los sprites
+        }
+        else if (GameManager.Instance.player == 3)
+        {
+            player.ani.Play("IdlePlayer3");
+        }
+        else if (GameManager.Instance.player == 4)
+        {
+            player.ani.Play("IdlePlayer4");
+        }
     }
 
     public void Update() {

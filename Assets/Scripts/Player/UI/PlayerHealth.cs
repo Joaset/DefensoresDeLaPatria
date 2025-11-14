@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = GameManager.Instance.maxHealth;
+        healthBar = GameObject.Find("Vida").GetComponent<Image>();
     }
 
    void Update()
